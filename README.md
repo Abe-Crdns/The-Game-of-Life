@@ -3,7 +3,9 @@ This is a simulation that was created by John Conway in 1970. The simulation mod
 
 The game occurs on a two-dimensional grid, with either location either “alive” (filled) or “dead” (empty). The neighbors of a given cell consist of all eight surrounding locations (four that are vertically or horizontally adjacent, plus four that touch only the corners).
 
-<img src="https://github.com/Abe-Crdns/The-Game-of-Life/blob/master/demo/gol.gif">
+<div align="center">
+  <img src="https://github.com/Abe-Crdns/The-Game-of-Life/blob/master/demo/gol.gif">
+</div>
 
 ## Requirements
 - X11 https://www.xquartz.org/
