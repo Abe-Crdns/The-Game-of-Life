@@ -53,7 +53,7 @@ static const std::map<std::string, ButtonValue> init_map(){
 static const std::map<std::string, ButtonValue> mapButtonValues = init_map();
 static const double GRID_MAX_HEIGHT = WINDOW_HEIGHT - (BUTTON_HEIGHT + (4 * BUTTON_Y_OFFSET));
 static const double GRID_MAX_WIDTH = WINDOW_WIDTH - ((2 * GRID_OFFSET) + CELL_OFFSET);
-static const double GAME_FRAME_RATE = 21;
+static const double GAME_FRAME_RATE = 20;
 
 static unsigned calc_rows(unsigned _cell_size){
   return (unsigned)floor((GRID_MAX_HEIGHT)/(_cell_size + CELL_OFFSET));
@@ -640,6 +640,8 @@ void GameOfLife::run(){
           // update live cells set
           if((*itor)->getIsAlive())
             live_cells.insert(*itor);
+          else if(live_cells.find(*itor) != live_cells.end())
+            live_cells.erase(*itor);
         }
       }
 
